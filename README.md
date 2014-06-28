@@ -20,14 +20,15 @@ __You should use this if:__
 
 ## Why is the memory usage so much lower?
 
-I use the lesser known ImageIO framework to render large images out at the exact size needed. This is a lot different to the usual Core Animation scaling you get when setting a big image in a small frame.
+I use the ImageIO framework to render large images out at the exact size needed. This is a lot different to the usual Core Animation scaling you get when setting a big image in a small frame.
 
 The big upshot of this comes when you're scrolling or animating the images as you no longer have to shift around and dump wasted pixels and memory with every frame. 
 
 ## What kind of benefits can I expect to see?
 
-As an example, I was able to take a 5000x2500 image scaled down to 320x160 and improve the FPS from 2 to 60 in a table view of 100 images. The memory usage went from ~300mb to 10.5mb (caching off, 22mb with caching enabled). 
+As an example, I was able to take a 5000x2500 image, rendered at 320x160, and improve the FPS from 2 to 60 in a table view of 100 images. The memory usage went from ~300mb to 10.5mb (caching off, 22mb with caching enabled). 
 
 Both of these metrics are big improvements :)
 
+If you want to talk to me about any of this then hit me up on Twitter - I'm [@jonhocking](https://twitter.com/jonhocking)
 
